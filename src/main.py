@@ -3,7 +3,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
-from src.config import HOME_URL, LOGIN_URL, USERNAME, PASSWORD
+from src.config import HOME_URL, LOGIN_URL, SSOUSERNAME, SSSOPASSWORD, USERNAME, PASSWORD
 from src.captcha_solver.captcha_solver import extract_base64_data, reconizeOCR
 
 def main():
@@ -29,9 +29,9 @@ def main():
             
             # 输入SSO登录的用户名和密码
             username_input = driver.find_element(By.ID, "j_username")
-            username_input.send_keys("lijiaming")
+            username_input.send_keys(SSOUSERNAME)
             password_input = driver.find_element(By.ID, "j_password")
-            password_input.send_keys("KAI^L9Cx")
+            password_input.send_keys(SSSOPASSWORD)
 
             # 点击SSO登录按钮
             login_button = driver.find_element(By.XPATH, "//button[@type='button' and contains(@class, 'loginBt')]")
