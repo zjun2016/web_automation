@@ -16,7 +16,7 @@ venv\Scripts\activate
 # 安装依赖包
 
 pip3 install selenium webdriver-manager
-pip3 install --upgrade 'openai>=1.0'
+pip3 install --upgrade 'openai>=1.0' #使用的是moonshot的接口
 pip3 install Pillow
 
 # 创建 requirements.txt 文件
