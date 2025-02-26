@@ -1,0 +1,2 @@
+# web_automation
+接入大模型的OCR识别和使用selenium实现页面自动化操作
