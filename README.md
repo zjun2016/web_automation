@@ -24,3 +24,8 @@ pip3 freeze > requirements.txt
 
 # 如果需要根据requirements.txt安装依赖包
 pip3 install -r requirements.txt
+
+# 运行项目 - 首先需要激活虚拟环境
+python3 run.py
+或者
+python3 -m src.main

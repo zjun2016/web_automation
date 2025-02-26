@@ -84,7 +84,7 @@ def main():
         
         else:
             print("当前页面已登录，无需重新登录。")
-            time.sleep(2)  # 等待主页加载完成
+            time.sleep(4)  # 等待主页加载完成
 
     finally:
         driver.quit()
