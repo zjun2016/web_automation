@@ -21,3 +21,6 @@ pip3 install Pillow
 
 # 创建 requirements.txt 文件
 pip3 freeze > requirements.txt
+
+# 如果需要根据requirements.txt安装依赖包
+pip3 install -r requirements.txt
