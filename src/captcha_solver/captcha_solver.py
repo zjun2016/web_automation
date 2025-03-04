@@ -11,7 +11,13 @@ client = OpenAI(
     base_url="https://api.moonshot.cn/v1",
 )
 
-def reconizeOCR(img_base):
+def identifyVerificationCodeWithAI(img_base):
+    resultStr = identifyImgWithAI(img_base)
+    number = extract_number_after_equal(resultStr)
+    print(number)
+    return number
+
+def identifyImgWithAI(img_base):
     img_base = f"data:image/png;base64,{img_base}"
     completion = client.chat.completions.create(
     model="moonshot-v1-8k-vision-preview",
@@ -38,9 +44,7 @@ def reconizeOCR(img_base):
     )
     resultStr = completion.choices[0].message.content
     print(resultStr)
-    number = extract_number_after_equal(resultStr)
-    print(number)
-    return number
+    return resultStr
 
 
 def extract_number_after_equal(s):
